@@ -7,6 +7,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+//import io.swagger.annotations.ApiModelProperty;
+
 @Entity
 @Table(name="libro")
 public class Libro {	

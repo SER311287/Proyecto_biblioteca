@@ -1,4 +1,5 @@
 package biblioteca.uspg.dao;
+//acceso a datos 
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
