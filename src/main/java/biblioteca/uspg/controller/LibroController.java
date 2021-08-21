@@ -40,7 +40,7 @@ public class LibroController {
  		return new ResponseEntity<List<Libro>>(service.listar(), HttpStatus.OK); 
 	 }
 	
-	// metodo ver datos 
+	// metodo mostrar  datos 
 	@GetMapping(value = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE ) 
 	public Optional<Libro> listarPorId(@PathVariable("id") Integer id){
 		return service.listarPorId(id);	
