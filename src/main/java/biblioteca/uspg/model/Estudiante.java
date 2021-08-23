@@ -6,6 +6,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.Size;
 
 
 @Entity
@@ -14,24 +15,32 @@ import javax.persistence.Table;
 public class Estudiante {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	Integer id_lector;
-	@Column(name="carnet",nullable=false, length=30)
+	Integer id_estudiante;
+	
+	@Size(min=3 , max=30 , message =" nombre minimo tres caracteres ")
+	@Column(name="carnet",nullable=false, length=50)
 	Integer carnet;
+	@Size(min=3 , max=30 , message =" nombre minimo tres caracteres ")
 	@Column(name="nombre",nullable=false, length=50)
 	String nombre;
-	@Column(name="direccion",nullable=false, length=30)
+	@Size(min=3 , max=30 , message =" nombre minimo tres caracteres ")
+	@Column(name="direccion",nullable=false, length=50)
 	String direccion;
-	@Column(name="carrera",nullable=false, length=30)
+	@Size(min=3 , max=30 , message =" nombre minimo tres caracteres ")
+	@Column(name="carrera",nullable=false, length=50)
 	String carrera;
-	@Column(name="edad",nullable=false, length=13)
+	@Size(min=3 , max=30 , message =" nombre minimo tres caracteres ")
+	@Column(name="edad",nullable=false, length=50)
 	Integer edad;
 	
-	public Integer getId_lector() {
-		return id_lector;
+	public Integer getId_estudiante() {
+		return id_estudiante;
 	}
-	public void setId_lector(Integer id_lector) {
-		this.id_lector = id_lector;
+	public void setId_estudiante(Integer id_estudiante) {
+		this.id_estudiante = id_estudiante;
 	}
+	
+	
 	public Integer getCarnet() {
 		return carnet;
 	}
