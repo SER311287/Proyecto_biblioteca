@@ -16,9 +16,9 @@ public class AutorServiceImpl implements IAutorService {
 	private IAutorDAO dao;
 	
 	@Override
-	public Autor registrar(Autor t) {
-		// TODO Auto-generated method stub
-		return dao.save(t);
+	public Autor registrar(Autor autor) {
+		autor.getPais().forEach(det -> det.setAutor(autor));
+		return dao.save(autor);
 	}
 
 	@Override

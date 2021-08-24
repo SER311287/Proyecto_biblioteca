@@ -18,7 +18,11 @@ public class PaisServiceImpl implements IPaisService {
 	@Autowired
 	private IPaisDAO dao;
 	
+	
 
+	
+	
+	
 	@Override
 	public Pais registrar(Pais t) {
 		// TODO Auto-generated method stub
